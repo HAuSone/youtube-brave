@@ -16,10 +16,10 @@ jobs:
         with:
           gradle-version: '8.1'
 
-      - name: Build APK
-        run: gradle assembleRelease
+      - name: Build APK debug
+        run: gradle assembleDebug
 
       - uses: actions/upload-artifact@v4
         with:
           name: youtube-brave.apk
-          path: app/build/outputs/apk/release/*.apk
+          path: app/build/outputs/apk/debug/*.apk
